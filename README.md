@@ -59,7 +59,7 @@ Duplicates appear as follows:
 ]
 ```
 
-All and only such lines that indicate a duplicated file contain only a single quoted value and end with a comma. I use `grep` to pass lines that contain that pattern through `sed` to replace the leading whitespace with the `rm ` command and then to remove the trailing `,`, writing the result to a file.
+All and only such lines that indicate a duplicated file contain only a single quoted value and end with a comma. I use `grep` to pass lines that contain that pattern through `sed` to replace the leading whitespace with the `rm ` command and then to remove the trailing comma, writing the result to a file.
 
 ```sh
 python3 -m json.tool < /tmp/dupes.json | grep '\"/mnt/d/dupes/.*\"\,' | sed -e 's/^\W*/rm "\//' | sed -e 's/,$//' > /tmp/remdupes.sh
