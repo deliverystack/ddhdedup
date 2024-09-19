@@ -9,7 +9,7 @@ This clog explains how you can use the command line to remove duplicate files, w
 
 DDH (Directory Differential hTool) is a library and Command Line Interface (CLI) written in Rust to locate duplicate files.
 
--[https://github.com/darakian/ddh]
+- [https://github.com/darakian/ddh]
 
 In WSL, I think you do something like the following to install rust tooling including cargo, which manages Rust packages.
 
