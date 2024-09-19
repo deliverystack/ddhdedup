@@ -46,10 +46,7 @@ I use `python3` and `batcat` to evaluate the report:
 python3 -m json.tool < /tmp/dupes.json | batcat -l json
 ```
 
-![Process Diagram](dupes.png "Process Diagram")
-![Screen Capture]( "Screen Capture")
-
-
+![Screen Capture](dupes.png "Screen Capture")
 
 Duplicates appear as follows:
 
