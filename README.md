@@ -27,14 +27,14 @@ cargo install --git https://github.com/darakian/ddh ddh
 
 ## Use Case
 
-I mount the Windows D: drive as /mnt/d:
+I mount the Windows `D:\` drive as `/mnt/d`:
 
 ```sh
 sudo mkdir /mnt/d
 sudo mount -t drvfs d: /mnt/d
 ```
 
-I use the `ddh` command line tool to generate a JSON (`-f`) file (`-o`) that lists all (`-v`) of the files under the D:\dupes (`-d`) subdirectory:
+I use the `ddh` command line tool to generate a JSON (`-f`) file (`-o`) that lists all (`-v`) of the files under the `D:\dupes` (`-d`) subdirectory:
 
 ```sh
 ~/.cargo/bin/ddh -d /mnt/d/dupes -v all -f json -o /tmp/dupes.json
