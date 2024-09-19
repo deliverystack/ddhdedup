@@ -59,7 +59,7 @@ Duplicates appear as follows:
 ]
 ```
 
-I use grep and sed to create a script that removes any duplicates.
+I use `grep` and `sed` to create a script that removes any duplicates.
 
 ```sh
 python3 -m json.tool < /tmp/dupes.json | grep '\"/mnt/d/dupes/.*\"\,' | sed -e 's/^\W*/rm "\//' | sed -e 's/,$//' > /tmp/remdupes.sh
