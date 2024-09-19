@@ -42,7 +42,7 @@ I use the `ddh` command line tool to generate a JSON (`-f`) file (`-o`) that lis
 ~/.cargo/bin/ddh -d /mnt/d/dupes -v all -f json -o /tmp/dupes.json
 ```
 
-I use `python3` and `batcat` to evaluate the report:
+I use `python3` to pretty-print the JSON and `batcat` to format the result:
 
 ```sh 
 python3 -m json.tool < /tmp/dupes.json | batcat -l json
