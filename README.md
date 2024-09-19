@@ -75,11 +75,13 @@ I run the script:
 sh /tmp/remdupes.sh
 ```
 
-I unmount D:
+I unmount the Windows `D:` drive and remove artifacts:
 
 ```sh
 sudo umount /mnt/d
 sudo rmdir /mnt/d
+rm /tmp/dupes.json
+rm /tmp/remdupes.sh
 ```
 
 ## Caveats
