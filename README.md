@@ -5,7 +5,7 @@ Use the DDH Command Line Tool to Remove Duplicate Files
 
 This clog explains how you can use the command line to remove duplicate files, which are files that contain the same content as other files. I used the the `ddh` command line tool written in the Rust programming language with the bash shell under Windows Subsystem for Linux (WSL). 
 
-This approach is potenitlaly fast in that it uses the command line, Rust, and apparently something like file checksums rather than bitwise comparison, and flexible in that the `ddh` command line tool supports command line options (or even use as a Rust library) as well as the ability to edit the generated JSON, and provides a sort of audit trail by using a JSON file and a script.
+This approach is potenitlaly fast in that it uses the command line, Rust, and lazy-loaded file hashes/checksums rather than bitwise comparison (and obviously only compares files of the same size). It is flexible in that the `ddh` command line tool supports command line options or even use as a Rust library, as well as by providing the ability to edit the generated JSON or manipulate the generated script. This approach also provides a sort of audit trail by using a JSON file to represent the file system and a script to control and therefore record deletion.
 
 ## DDH
 
