@@ -3,7 +3,7 @@ Use the DDH Command Line Tool to Remove Duplicate Files
 
 ## Introduction
 
-This clog explains how you can use the command line to remove duplicate files, which are files that contain the same content as other files. Specifically, I use the bash shell in Windows Subsystem for Linux, the `ddh` command line tool written in the Rust programming language.
+This clog explains how you can use the command line to remove duplicate files, which are files that contain the same content as other files. Specifically, I use the bash shell in Windows Subsystem for Linux, the `ddh` command line tool written in the Rust programming language. This approach is potenitlaly fast in that it uses the command line, Rust, and apparently something like file checksums rather than bitwise comparison, and flexible in that the `ddh` command line tool supports command line options as well as the ability to edit the generated JSON, and provides a sort of audit trail by using a JSON file and a script.
 
 ## DDH
 
@@ -19,7 +19,7 @@ sudo apt install cargo
 rustup update
 ```
 
-Then you can use `cargo` to install DDH:
+Then you can use `cargo` to install the `ddh` command line tool:
 
 ```sh
 cargo install --git https://github.com/darakian/ddh ddh
@@ -86,9 +86,9 @@ rm /tmp/remdupes.sh
 
 ## Caveats
 
-This relies on the DDH command line tool including its file checksum logic.
+This relies on the `ddh` command line tool including its file checksum logic.
 
-This leaves the last instance of the file as listed in the JSON file created by the DDH command line tool.
+This leaves the last instance of the file as listed in the JSON file created by the `ddh` command line tool.
 
 It would likely be more efficient to remove all of the files at once, or in large batches, rather than individually.
 
